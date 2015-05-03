@@ -1,0 +1,19 @@
+{
+  "name": "Cerrate e la Masserie Fortificate",
+  "description": "Una pista alternativa alla pista ciclabile fantasma.",
+  "features": {
+    "type": "sentiero",
+    "distance": "14.7 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.1 %",
+    "max_slope": "5 %",
+    "track_density": "13 punti/km",
+    "difference": "16 m",
+    "ascent_difference": "37 m",
+    "descent_difference": "37 m"
+  }
+}

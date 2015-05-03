@@ -1,0 +1,19 @@
+{
+  "name": "Lecce: Via Scotellaro",
+  "description": "Facile percorso in bici da via Rocco Scotellaro a Via Vecchia Frigole, passando per la campagna a nord di Lecce.",
+  "features": {
+    "type": "ciclostrada",
+    "distance": "9.6 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.3 %",
+    "max_slope": "3 %",
+    "track_density": "8.9 punti/km",
+    "difference": "24 m",
+    "ascent_difference": "44 m",
+    "descent_difference": "44 m"
+  }
+}

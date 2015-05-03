@@ -1,0 +1,19 @@
+{
+  "name": "Trepuzzi: via Zona Industriale",
+  "description": "Breve tratto di pista ciclabile con fondo in asfalto e cordolo di protezione.",
+  "features": {
+    "type": "ciclabile",
+    "distance": "0.46 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.4 %",
+    "max_slope": "1 %",
+    "track_density": "19.5 punti/km",
+    "difference": "2 m",
+    "ascent_difference": "0 m",
+    "descent_difference": "2 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Casalabate - Lecce",
+  "description": "Tratto tra Casalabate e Lecce della Ciclovia adriatica.",
+  "features": {
+    "type": "ciclostrada",
+    "distance": "30.1 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.2 %",
+    "max_slope": "5 %",
+    "track_density": "102.6 punti/km",
+    "difference": "47 m",
+    "ascent_difference": "145 m",
+    "descent_difference": "102 m"
+  }
+}

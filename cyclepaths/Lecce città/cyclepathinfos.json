@@ -1,0 +1,19 @@
+{
+  "name": "Lecce città",
+  "description": "Itinerario appena realizzato, composto da 0,7 km di percorso ciclopedonale e 0,7 km di percorso su sede propria separata dalla carreggiata.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "0.98 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.8 %",
+    "max_slope": "2 %",
+    "track_density": "6.1 punti/km",
+    "difference": "8 m",
+    "ascent_difference": "4 m",
+    "descent_difference": "8 m"
+  }
+}

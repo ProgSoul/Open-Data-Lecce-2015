@@ -1,0 +1,19 @@
+{
+  "name": "Lecce - Specchia dell'Alto",
+  "description": "Paesaggi del barocco naturale.",
+  "features": {
+    "type": "ciclabile",
+    "distance": "19.5 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.1 %",
+    "max_slope": "3 %",
+    "track_density": "6.1 punti/km",
+    "difference": "27 m",
+    "ascent_difference": "58 m",
+    "descent_difference": "61 m"
+  }
+}

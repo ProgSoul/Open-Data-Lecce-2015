@@ -1,0 +1,19 @@
+{
+  "name": "Lecce: via Minzoni - via Otranto",
+  "description": "Ciclabile ad anello che da via Manzoni permette di raggiungere via Otranto.",
+  "features": {
+    "type": "ciclabile",
+    "distance": "0.8 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.5 %",
+    "max_slope": "2 %",
+    "track_density": "7.5 punti/km",
+    "difference": "4 m",
+    "ascent_difference": "4 m",
+    "descent_difference": "5 m"
+  }
+}

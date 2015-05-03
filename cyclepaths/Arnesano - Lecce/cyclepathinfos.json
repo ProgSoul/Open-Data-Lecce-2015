@@ -1,0 +1,19 @@
+{
+  "name": "Arnesano - Lecce",
+  "description": "Passeggiata tra le campagne, medio livello, con un punto in salita verso l'arrivo a Lecce.",
+  "features": {
+    "type": "strada",
+    "distance": "5.9 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.5 %",
+    "max_slope": "4 %",
+    "track_density": "5.7 punti/km",
+    "difference": "31 m",
+    "ascent_difference": "44 m",
+    "descent_difference": "18 m"
+  }
+}

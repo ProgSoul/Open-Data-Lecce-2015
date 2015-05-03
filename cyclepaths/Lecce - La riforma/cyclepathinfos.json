@@ -1,0 +1,19 @@
+{
+  "name": "Lecce - La riforma",
+  "description": "Da via Rogerone al mare di Frigole passando per Giammatteo.",
+  "features": {
+    "type": "ciclabile",
+    "distance": "9.5 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.3 %",
+    "max_slope": "5 %",
+    "track_density": "6.9 punti/km",
+    "difference": "25 m",
+    "ascent_difference": "14 m",
+    "descent_difference": "38 m"
+  }
+}

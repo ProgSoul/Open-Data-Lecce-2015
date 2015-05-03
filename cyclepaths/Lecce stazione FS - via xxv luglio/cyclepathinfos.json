@@ -1,0 +1,19 @@
+{
+  "name": "Lecce: stazione FS - via xxv luglio",
+  "description": "Itinerario ciclopedonale che dalla stanzione FS permette di arrivare a a via xxv luglio.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "1.84 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.3 %",
+    "max_slope": "6 %",
+    "track_density": "13.5 punti/km",
+    "difference": "6 m",
+    "ascent_difference": "16 m",
+    "descent_difference": "13 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Lecce: via Mincio - via Michele de Pietro",
+  "description": "Da via Mincio a via Michele de Pietro.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "1 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.4 %",
+    "max_slope": "3 %",
+    "track_density": "15 punti/km",
+    "difference": "4 m",
+    "ascent_difference": "5 m",
+    "descent_difference": "5 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Lecce: via Benedetto Croce - via del Mare",
+  "description": "Partenza via Aldo Moro.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "0.96 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.6 %",
+    "max_slope": "8 %",
+    "track_density": "15.6 punti/km",
+    "difference": "6 m",
+    "ascent_difference": "6 m",
+    "descent_difference": "9 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "D'Aurio - Rauccio",
+  "description": "Dalla Chiesa di Madonna D'Aurio al Parco di Rauccio.",
+  "features": {
+    "type": "ciclabile",
+    "distance": "8 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.4 %",
+    "max_slope": "6 %",
+    "track_density": "20 punti/km",
+    "difference": "33 m",
+    "ascent_difference": "15 m",
+    "descent_difference": "48 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Tour dei due mari: dall'Adriatico allo Ionio passando per Lecce",
+  "description": "Circuito praticamente pianeggiante. Paesaggisticamente molto bello, è tuttavia impegnativo a causa della lunghezza complessiva e, in particolare, se affrontato con venti provenienti dal quadrante settentrionale qualora si decida di porre il capoluogo salentino quale partenza e arrivo dell'itinerario (sviluppandosi a sud di Lecce). Richiede quindi un buon allenamento di fondo lungo/lunghissimo a meno che non si decida di frazionarlo in due tappe. Periodo consigliato: da ottobre a maggio a causa del caldo e del traffico automobilistico dei mesi estivi (si sviluppa quasi interamente su strade provinciali, semi-deserte durante il mite inverno salentino).",
+  "features": {
+    "type": "strada",
+    "distance": "125.6 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.1 %",
+    "max_slope": "5 %",
+    "track_density": "1.3 punti/km",
+    "difference": "90 m",
+    "ascent_difference": "344 m",
+    "descent_difference": "336 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Lecce - Zona Industriale: ciclabile dir. Sud",
+  "description": "Pista ciclabile protetta Lecce Viale M. Chiatante (Zona Industriale) direzione Sud.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "4.2 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.3 %",
+    "max_slope": "5 %",
+    "track_density": "21.9 punti/km",
+    "difference": "11 m",
+    "ascent_difference": "20 m",
+    "descent_difference": "25 m"
+  }
+}

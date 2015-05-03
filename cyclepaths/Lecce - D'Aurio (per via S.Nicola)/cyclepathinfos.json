@@ -1,0 +1,19 @@
+{
+  "name": "Lecce - D'Aurio (per via S.Nicola)",
+  "description": "Percorso per l'Abbazia di Mad. D'Aurio dal Foro Boario (Piazza Carmelo Bene).",
+  "features": {
+    "type": "strada",
+    "distance": "5.1 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "no",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.2 %",
+    "max_slope": "5 %",
+    "track_density": "14.7 punti/km",
+    "difference": "11 m",
+    "ascent_difference": "23 m",
+    "descent_difference": "31 m"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Lecce - Cesine: Oasi WWF",
+  "description": "Vergognosa pista ciclabile Lecce-San Cataldo-Cesine(Oasi WWF), realizzata con fondi pubblici per l'80% e mai completata.",
+  "features": {
+    "type": "ciclopedonale",
+    "distance": "8.37 km",
+    "road_surface": "asfalto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "si"
+  },
+  "details": {
+    "average_slope": "0.3 %",
+    "max_slope": "5 %",
+    "track_density": "4.3 punti/km",
+    "difference": "29 m",
+    "ascent_difference": "12 m",
+    "descent_difference": "36 m"
+  }
+}

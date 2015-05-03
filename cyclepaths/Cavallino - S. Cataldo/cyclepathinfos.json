@@ -1,0 +1,19 @@
+{
+  "name": "Cavallino - S. Cataldo",
+  "description": "Una pista alternativa alla pista ciclabile fantasma.",
+  "features": {
+    "type": "ciclostrada",
+    "distance": "19.6 km",
+    "road_surface": "misto",
+	"is_suitable_for_children": "si",
+    "is_suitable_for_skaters": "no"
+  },
+  "details": {
+    "average_slope": "0.2 %",
+    "max_slope": "5 %",
+    "track_density": "102.6 punti/km",
+    "difference": "43 m",
+    "ascent_difference": "33 m",
+    "descent_difference": "66 m"
+  }
+}

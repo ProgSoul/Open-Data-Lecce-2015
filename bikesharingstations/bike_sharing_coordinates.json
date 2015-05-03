@@ -1,0 +1,57 @@
+[
+  {
+    "address": "Viale Porta d'Europa, Lecce",
+    "latitude": "40.36165334640747",
+    "longitude": "18.169240951538086"
+  },
+  {
+    "address": "Viale Francesco Calasso, Lecce",
+    "latitude": "40.359822105480006",
+    "longitude": "18.169326782226562"
+  },
+  {
+    "address": "Via Egidio Reale, Lecce",
+    "latitude": "40.354197268759684",
+    "longitude": "18.165206909179688"
+  },
+  {
+    "address": "Via Giacomo Matteotti, Lecce",
+    "latitude": "40.35409915697888",
+    "longitude": "18.172974586486816"
+  },
+  {
+    "address": "Via Nazario Sauro, Lecce",
+    "latitude": "40.354589714455514",
+    "longitude": "18.178725242614746"
+  },
+  {
+    "address": "Via Cesare Battisti, Lecce",
+    "latitude": "40.354785936446895",
+    "longitude": "18.182501792907715"
+  },
+  {
+    "address": "Via Don Bosco, Lecce",
+    "latitude": "40.34693661141325",
+    "longitude": "18.16636562347412"
+  },
+  {
+    "address": "Piazza Ludovico Ariosto, Lecce",
+    "latitude": "40.35926618321339",
+    "longitude": "18.18009853363037"
+  },
+  {
+    "address": "Largo Vittime del Terrorismo, Lecce",
+    "latitude": "40.356126771439065",
+    "longitude": "18.191471099853516"
+  },
+  {
+    "address": "Via Marino Brancaccio, Lecce",
+    "latitude": "40.34988021536189",
+    "longitude": "18.173017501831055"
+  },
+  {
+    "address": "Via Torre del Parco, Lecce",
+    "latitude": "40.347786999083404",
+    "longitude": "18.17911148071289"
+  }
+]
