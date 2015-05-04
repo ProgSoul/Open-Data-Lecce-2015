@@ -106,6 +106,108 @@ La query effettuata da Import.io permette di ottenere la tabella appena descritt
 Nei punti precedenti abbiamo ricostruito i dataset di base, sia statici che dinamici, che contengono le informazioni che dovranno essere trattate prima di restituirle all’utente finale. In questo punto spiegheremo come realizzare gli script che permetteranno di unire, raffinare e ridefinire nuovi dataset a partire da quelli di partenza ed ottenere, infine, i dataset nella loro forma definitiva.
 Gli script sono realizzati in linguaggio PHP, linguaggio orientato ad oggetti che permette di realizzare script conformi agli standard dell’ingegneria del software, e i dataset restituiti saranno sempre in formato JSON, formato di interscambio leggibile e leggero, compatibile con qualunque dispositivo mobile e non presente sul mercato.
 
+### 3.1	POSTAZIONI DI BIKE SHARING
 
+1. Recupero dei dati dinamici in forma JSON (descritti nel punto 2.1) attraverso una query effettuata ai server dell’applicazione Import.io e memorizzazione del campo “results” facente parte del JSON appena ricevuto.
+3. Decodifica del file JSON, contenente gli indirizzi e le coordinate di ogni stazione di bike sharing, all’interno dell’oggetto bikeSharingCoordinates
+3. Per ogni oggetto presente all’interno dell’array queryResult
+    * Eliminare, nel caso esista, la dicitura “ Non operativa” dal nome della postazione di bike sharing e creare un nuovo campo “is_operative” che indica l’operatività effettiva della stazione.
+    * Trovare i valori numerici all’interno del campo “value”, attraverso un’espressione regex, e assegnarli rispettivamente ai nuovi campi “free_bikes” e “available_bikes”. Una volta assegnati, eliminare il campo “value” per risparmiare memoria.
+    * Copiare i valori dei campi “address”, “latitude” e “longitude” dall’oggetto contenuto nell’array bikeSharingCoordinates e inserirli nei rispettivi nuovi campi di queryResult.
+4. Convertire il vettore queryResult in formato JSON e restituirlo in output.
 
+```sh
+<?php
 
+$userGuid = "b4de99c8-bc3e-42ac-9e66-0bbf9019ff22";
+$apiKey = "VX+ssJACaAbTXNbxWVf7bI0he+kkirPA0AHeUNxjk+eNDzDUCHo3axrfbz5rgUY1NpzdLZTS80l/Vq2i7JtR5A==";
+
+// Issues a query request to import.io
+function query($connectorGuid, $input, $userGuid, $apiKey) {
+	$url = "https://query.import.io/store/connector/" . $connectorGuid . "/_query?_user=" . urlencode($userGuid) . "&_apikey=" . urlencode($apiKey);
+	return json_decode(file_get_contents($url));
+}
+
+// Query for tile getBikeSharingStationsInfos
+$queryResult = query("74ca0f38-5e47-4242-a52e-19d971952b15", array(
+  "webpage/url" => "http://bicincitta.tobike.it/frmLeStazioni.aspx?ID=159",
+), $userGuid, $apiKey, false)->results;
+
+// Decode bike sharing coordinates from json
+$bikeSharingCoordinates = json_decode(file_get_contents("bike_sharing_coordinates.json"),true);
+//var_dump($bikeSharingCoordinates);
+
+for($i = 0; $i < count($queryResult); $i++) {
+	// cleanup values not well formed
+	// create status class attribute and delete it from name attribute
+	if (strpos($queryResult[$i]->name,' Non operativa') !== false) {
+		$queryResult[$i]->name = str_replace(' Non operativa', '', $queryResult[$i]->name);
+		$queryResult[$i]->is_operative = "false";
+	} else {
+		$queryResult[$i]->is_operative = "true";
+	}
+		
+	// find numbers in value attribute and extract them
+	preg_match_all('!\d+!', $queryResult[$i]->value, $matches);
+	$queryResult[$i]->free_bikes = $matches[0][0];
+	$queryResult[$i]->available_places = $matches[0][1];
+	
+	// once the numbers are extracted, value attribute will be deleted
+	unset($queryResult[$i]->value);
+	
+	// get address and coordinates from json and set class attributes
+	$queryResult[$i]->address = $bikeSharingCoordinates[$i]["address"];
+	$queryResult[$i]->latitude = $bikeSharingCoordinates[$i]["latitude"];
+	$queryResult[$i]->longitude = $bikeSharingCoordinates[$i]["longitude"];
+}
+
+echo json_encode($queryResult);
+```
+
+### 3.2	PISTE CICLABILI DI LECCE E PROVINCIA
+
+1. Ogni pista ciclabile ha una propria cartella al cui interno sono presenti un file CSV che rappresenta l’elenco delle coordinate del tracciato e un file JSON contenente le informazioni di base. Per questo, come primo passo, dobbiamo ottenere l’elenco delle cartelle all’interno di un array chiamato directories e allocare lo spazio per un nuovo array chiamato cyclePathsCompleteInfos che conterrà le informazioni unificate e rivedute.
+2. Per ogni oggetto contenuto all’interno del vettore directories
+    * Convertire il file CSV all’interno della cartella in un vettore di coordinate chiamato cyclePathCoordinates
+    * Decodificare il file JSON all’interno della cartella in un vettore chiamato cyclePathInfos
+    * Unire cyclePathCoordinates e cyclePathInfos e inserire l’oggetto unificato all’interno di cyclePathsCompleteInfos
+3. Convertire il vettore cyclePathsCompleteInfos in formato JSON e restituirlo in output.
+    
+```sh
+<?php
+
+// converts CSV file to array
+function convertCSVToArray($csvPath) {
+	$result = array();
+	if (($handle = fopen($csvPath, "r")) !== FALSE) {
+		$column_headers = fgetcsv($handle); // read the row.
+		foreach($column_headers as $header) {
+			$header = str_replace(';', '', $header); //deletes ';' character from header
+			$result[$header] = array();
+		}
+
+		while (($data = fgetcsv($handle)) !== FALSE) {
+			$i = 0;
+			foreach($result as &$column) {
+					$column[] = $data[$i++];
+			}
+		}
+		fclose($handle);
+	}
+	return $result;
+}
+
+// get all directories representing a cycle path
+$directories = array_filter(glob('*'), 'is_dir');
+// defines the result array that will contain every cycle path infos
+$cyclePathsCompleteInfos = array();
+
+for ($i = 0; $i < count($directories); $i++) {
+	$cyclePathCoordinates = convertCSVToArray($directories[$i]."\cyclepathcoordinates.csv");
+	$cyclePathInfos = json_decode(file_get_contents($directories[$i]."\cyclepathinfos.json"),true);
+	// merge infos and coordinates and put the new array into the i-th position
+	$cyclePathsCompleteInfos[$i] = array_merge($cyclePathCoordinates, $cyclePathInfos);
+}
+
+echo json_encode($cyclePathsCompleteInfos);
+```
