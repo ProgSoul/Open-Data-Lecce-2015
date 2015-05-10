@@ -1,4 +1,4 @@
-# Open Data Lecce 2015
+# LecceByBike - Ricostruzione dataset - Open Data Lecce Contest 2015
 
 ### 1	RICOSTRUZIONE DEI DATI
 Uno dei principali obiettivi che si pone la raccolta dei dati, e la loro conseguente visualizzazione, è sicuramente la manutenibilità, la facilità nell’essere manipolati ma soprattutto la leggibilità, in modo che ogni cittadino sia in grado di interpretarli ed estrapolarne il significato. 
